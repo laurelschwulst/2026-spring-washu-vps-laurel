@@ -41,8 +41,8 @@
             /* width: 100px;
             height: 100px; */
          }
-         #welcome {
-            margin-top: 10em;
+         .space {
+            height: 10em;
          }
          img {
             max-width: 100%;
@@ -54,11 +54,26 @@
          }
          #welcome {
             padding: 1em;
+            padding-top: 2em;
          }
          #entrees {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
             gap: 1em;
+            padding: 1em 0;
+         }
+         #entrees p {
+            text-align: center;
+         }
+         #welcome,
+         #sides {
+            text-align: center;
+         }
+         hr {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            border-bottom: 2px solid var(--teal);
          }
          .first {
             /* background: yellow; */
@@ -68,6 +83,10 @@
          .second {
             /* background: lime; */
          }
+         #outro {
+            padding: 2em 0;
+            text-align: center;
+         }
     </style>
 </head>
 <body>
@@ -75,26 +94,32 @@
     <h1 id="telva-at-the-ridge">
         Telva
     </h1>
+
+    <div class="space"></div>
+
+    <hr>
     
     <section id="welcome">
+        
         <em>
             Welcome! We serve Balkan food for breakfast and lunch in Webster Groves, Missouri, near St. Louis.
         </em>
 
         <p>
-            <b>Where?</b>
+            <b>Where?</b><br>
         <a href="https://maps.app.goo.gl/SizprGwbhX2982Mt6">60 N Gore Ave, Webster Groves</a></li>
             </p>
 
         <p>
-            <b>When?</b>
-            Monday - Saturday — 8am-3pm,
+            <b>When?</b><br>
+            Monday - Saturday — 8am-3pm<br>
         Sunday — 9am - 3pm
         </p>
 
         <p>
-            <b>Who?</b>
-            <a href="https://www.instagram.com/telvastl">@telvastl</a>, <a href="+tel:314-395-2760">314-395-2760</a>
+            <b>Who?</b><br>
+            <a href="https://www.instagram.com/telvastl">@telvastl</a><br>
+            <a href="+tel:314-395-2760">314-395-2760</a>
         </p>
     </section>
 
@@ -158,6 +183,8 @@
 
     </section>
 
+    <hr>
+
     <section id="sides">
         <h3>Sides</h3>
         <p>
@@ -178,6 +205,12 @@
         <p>
             Union Loafer Sourdough <code>$3</code>
         </p>
+    </section>
+
+    <hr>
+
+    <section id="outro">
+        "<em>This place is excellent! The menu is small and we had some skeptics in our group but they were easily won over. You order at the counter before finding a spot to sit and they bring the food to you. I had the avocado toast and baklava granola parfait. It was all delicious! My boyfriend liked the parfait so much he ordered one of his own... and three expresso martinis. 😅 Everything we had was amazing but the parfait stole the show! It's delicate, unique, and an easy snack for anyone craving something a little sweet.</em>" <br><br>— erika on Google
     </section>
 
 </body>
