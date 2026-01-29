@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telva at the Ridge</title>
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+        } */
+        :root {
+            --teal: rgb(35, 214, 190);
+        }
+        body {
+            font-family: "Arial Narrow", Arial, Helvetica, sans-serif;
+            background: var(--teal);
+            animation-name: colorchange;
+            animation-duration: 15s;
+            animation-iteration-count: infinite; 
+            animation-direction: alternate;
+        }
+        h1 {
+            font-family: cursive;
+            /* color: rgb(35, 214, 190); */
+            /* color: var(--teal); */
+            font-size: 5em;
+            text-align: center;
+            margin: 0;
+            position: absolute;
+            right: 0;
+            top: 10px;
+            left: 0;
+        }
+        /* * {
+            border: 1px solid red;
+            padding: 0.5em;
+            margin: 1em;
+        } */
+         a {
+            color: black;
+            background: white;
+            text-decoration: none;
+            display: inline-block;
+            transition: 2s;
+            /* padding: 1em; */
+            /* width: 100px;
+            height: 100px; */
+         }
+         a:hover {
+            background: blue;
+            color: var(--teal);
+            /* font-size: 24px; */
+         }
+         .space {
+            height: 10em;
+         }
+         img {
+            max-width: 100%;
+         }
+         #welcome {
+            padding: 1em;
+            padding-top: 2em;
+         }
+         #entrees {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1em;
+            padding: 1em 0;
+         }
+         #entrees p {
+            text-align: center;
+         }
+         #welcome,
+         #sides {
+            text-align: center;
+         }
+         hr {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            border-bottom: 2px solid white;
+         }
+         .first {
+            /* background: yellow; */
+            border-right: 2px solid var(--teal);
+            padding-right: 1em;
+         }
+         .second {
+            /* background: lime; */
+         }
+         #outro {
+            padding: 2em 0;
+            text-align: center;
+         }
+
+         .toast {
+            width: 300px;
+            margin-top: 10em;
+            border-radius: 20px;
+            margin-bottom: 5em;
+            transition: 0.5s ease;
+         }
+         .toast:hover {
+            transform: scale(1.25);
+         }
+         .asdf {
+            border: 5px solid yellow;
+         }
+         @keyframes colorchange {
+            from {
+                background-color: var(--teal);
+                /* font-size: 10px; */
+            }
+            to {
+                background-color: rgb(0, 72, 255);
+                /* font-size: 100px; */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="telva-at-the-ridge">
+        Telva
+    </h1>
+
+    <center>
+    <img src="images/telva1.webp" class="toast">
+        </center>
+    <!-- <div class="space"></div> -->
+
+    <hr>
+    
+    <section id="welcome">
+        
+        <em>
+            Welcome! We serve Balkan food for breakfast and lunch in Webster Groves, Missouri, near St. Louis.
+        </em>
+
+        <p>
+            <b>Where?</b><br>
+        <a href="https://maps.app.goo.gl/SizprGwbhX2982Mt6">60 N Gore Ave, Webster Groves</a></li>
+            </p>
+
+        <p>
+            <b>When?</b><br>
+            Monday - Saturday — 8am-3pm<br>
+        Sunday — 9am - 3pm
+        </p>
+
+        <p>
+            <b>Who?</b><br>
+            <a href="https://www.instagram.com/telvastl">@telvastl</a><br>
+            <a href="+tel:314-395-2760">314-395-2760</a>
+        </p>
+    </section>
+
+    <hr>
+
+    <section id="entrees">
+
+        <div class="asdf">
+
+            <p>
+                <strong>Breakfast Sendvic</strong><br>
+                <em>Fresh Bread, Sunny Egg, Cheese, Herbed Ajvar Mayo</em><br>
+                <code>$10</code>
+            </p>
+            
+            <p>
+                <strong>Sloppy Mustafa Tost</strong><br>
+                <em>Moussaka Seasoned Beef, Cheese, Sunny Egg, Herbs, Union Loafers Sourdough</em><br>
+                <code>$16</code>
+            </p>
+
+            <p>
+                <strong>Hummus Toast (V)</strong><br>
+                <em>Creamy Chickpea Salad, Pickled Onions, Greens, Union Loafers, Sourdough</em><br>
+                <code>$16</code>
+            </p>
+
+        </div>
+
+        <div class="asdf">
+
+            <p>
+                <strong>Telva Avocado Tost</strong><br>
+                <em>Roasted Tomato, Cucumber, Feta, Olive, Tzatziki, Sesame Crunch, Herbs, Union Loafers Sourdough</em><br>
+                <code>$14</code>
+            </p>
+
+            <p>
+                <strong>Sweet Przenice (Custard Soaked Toasted Bread)</strong><br>
+                <em>Rotating variety, please ask about today's preparation</em><br>
+                <code>$15</code>
+            </p>
+
+            <p>
+                <strong>Tikva Salata</strong><br>
+                <em>Baby Kale, Fire-Roasted Delicata Squash, Radish, Feta, Pepita Dressing, Orange, Dates, Crispy Chickpeas</em><br>
+                <code>$15</code>
+            </p>
+
+        </div>
+
+        <div class="asdf">
+            
+            <p>
+                <strong>Cilbir (Turkish Eggs)</strong><br>
+                <em>2 Sunny Eggs, Garlic Yogurt, Tomato-Chile Brown Butter, Herbs, Toasted Somun</em><br>
+                <code>$16</code>
+            </p>
+
+            <p>
+                <strong>Baklava Yogurt Parfait</strong><br>
+                <em>House-Made Yogurt, Baklava Granola, Crispy Phyllo, Agda</em><br>
+                <code>$12</code>
+            </p>
+
+            <p>
+                <strong>Breakfast Pide</strong><br>
+                <em>Wood Fired Flatbrea, Runny Egg, Cheese, Herbs</em><br>
+                <code>$18</code>
+            </p>
+
+       </div>
+
+    </section>
+
+    <hr>
+
+    <section id="sides">
+        <h3>Sides</h3>
+        <p>
+            Buttonwood Farm Fresh Egg <code>$3</code>
+        </p>
+        <p>
+            Sudzuka (Beef Sausage) <code>$5</code>
+        </p>
+        <p>
+            Bolyards Beef Bacon <code>$5</code>
+        </p>
+        <p>
+            Turkey Bacon <code>$4</code>
+        </p>
+        <p>
+            Somun Bread <code>$3</code>
+        </p>
+        <p>
+            Union Loafer Sourdough <code>$3</code>
+        </p>
+    </section>
+
+    <hr>
+
+    <section id="outro">
+        "<em>This place is excellent! The menu is small and we had some skeptics in our group but they were easily won over. You order at the counter before finding a spot to sit and they bring the food to you. I had the avocado toast and baklava granola parfait. It was all delicious! My boyfriend liked the parfait so much he ordered one of his own... and three expresso martinis. 😅 Everything we had was amazing but the parfait stole the show! It's delicate, unique, and an easy snack for anyone craving something a little sweet.</em>" <br><br>— erika on Google
+    </section>
+
+</body>
+</html>
