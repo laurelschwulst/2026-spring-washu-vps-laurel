@@ -11,6 +11,9 @@
             color: lemonchiffon;
             display: inline-block;
         }
+        body.pink-mode a:hover {
+  color: pink;
+}
     </style>
 </head>
 <body>
@@ -113,6 +116,64 @@ showRandomText();
 
 // then repeat every 3000ms (3 seconds)
 setInterval(showRandomText, 3000);
+
+// if the time is 9am through 11:20am CST on either tuesday or thursday
+// change the background color of the page (the body element) to pink
+// when it's not these times, change it back to lemonchiffon
+
+function updateBackgroundColor() {
+  const now = new Date();
+
+  console.log(now);
+
+  // Convert to Central Time
+  const options = {
+    timeZone: "America/Chicago",
+    weekday: "long",
+    hour: "numeric",
+    minute: "numeric",
+    hour12: false
+  };
+
+  const formatter = new Intl.DateTimeFormat("en-US", options);
+  const parts = formatter.formatToParts(now);
+
+  let weekday, hour, minute;
+
+  parts.forEach(part => {
+    if (part.type === "weekday") weekday = part.value.toLowerCase();
+    if (part.type === "hour") hour = parseInt(part.value);
+    if (part.type === "minute") minute = parseInt(part.value);
+  });
+
+  const timeInMinutes = hour * 60 + minute;
+
+  const start = 9 * 60;       // 9:00am
+  const end = 11 * 60 + 20;   // 11:20am
+
+  const isCorrectDay = weekday === "tuesday" || weekday === "thursday";
+  const isCorrectTime = timeInMinutes >= start && timeInMinutes <= end;
+
+  const questionEls = document.querySelectorAll(".question");
+
+  if (isCorrectDay && isCorrectTime) {
+    document.body.style.backgroundColor = "pink";
+    document.body.classList.add("pink-mode");
+
+    questionEls.forEach(el => el.style.color = "pink");
+  } else {
+    document.body.style.backgroundColor = "lemonchiffon";
+    document.body.classList.remove("pink-mode");
+
+    questionEls.forEach(el => el.style.color = "");
+  }
+}
+
+// run once on load
+updateBackgroundColor();
+
+// check every minute
+setInterval(updateBackgroundColor, 60 * 1000);
 
     </script>
 </body>
